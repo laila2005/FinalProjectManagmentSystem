@@ -32,9 +32,9 @@ public class UserManager {
 
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                boolean isLeader = rs.getBoolean("is_leader");
+                boolean is_leader = rs.getBoolean("is_leader");
                 System.out.println("Login successful! Welcome, " + username + ".");
-                if (isLeader) {
+                if (is_leader) {
                     TeamLeader leader = new TeamLeader(username, connection);
                     leader.menu(scanner);
                 } else {

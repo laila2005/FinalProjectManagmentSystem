@@ -39,16 +39,12 @@ public class TeamMember {
             scanner.nextLine(); // Consume newline
 
             switch (choice) {
-                case 1:
-                    viewTasks();
-                    break;
-                case 2:
-                    updateTaskStatus(scanner);
-                    break;
-                case 3:
+                case 1 -> viewTasks();
+                case 2 -> updateTaskStatus(scanner);
+                case 3 -> {
                     return;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
+                }
+                default -> System.out.println("Invalid choice. Please try again.");
             }
         }
     }

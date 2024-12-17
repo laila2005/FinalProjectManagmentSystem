@@ -11,19 +11,19 @@ package com.mycompany.finalprojectmanagmentsystem;
 public class User {
     private String username;
     private String password;
-    private boolean isLeader;
+    private boolean is_leader;
 
-    public User(String username, String password, boolean isLeader) {
+    public User(String username, String password, boolean is_leader) {
         this.username = username;
         this.password = password;
-        this.isLeader = isLeader;
+        this.is_leader = is_leader;
     }
 
     public String getUsername() {
         return username;
     }
 
-    public boolean isLeader() {
-        return isLeader;
+    public boolean is_leader() {
+        return is_leader;
     }
 }

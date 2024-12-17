@@ -50,7 +50,7 @@ public class TeamMember {
     }
 
      protected void viewTasks() throws SQLException {
-        String query = "SELECT * FROM tasks WHERE assigned_to = ?";
+        String query = "SELECT * FROM Task WHERE assigned_to = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, username);
             ResultSet rs = stmt.executeQuery();
@@ -68,7 +68,7 @@ public class TeamMember {
         System.out.print("Enter new status (To-Do, On-Going, Done): ");
         String newStatus = scanner.nextLine();
 
-        String query = "UPDATE tasks SET status = ? WHERE id = ? AND assigned_to = ?";
+        String query = "UPDATE Task SET status = ? WHERE id = ? AND assigned_to = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, newStatus);
             stmt.setInt(2, taskId);

@@ -48,7 +48,7 @@ public class TeamLeader extends TeamMember {
         System.out.print("Enter status (To-Do, On-Going, Done): ");
         String status = scanner.nextLine();
 
-        String query = "INSERT INTO tasks (task_name, deadline, status) VALUES (?, ?, ?)";
+        String query = "INSERT INTO Task (task_name, deadline, status) VALUES (?, ?, ?)";
         try (PreparedStatement stmt = getConnection().prepareStatement(query)) {
             stmt.setString(1, taskName);
             stmt.setString(2, deadline);
@@ -59,7 +59,7 @@ public class TeamLeader extends TeamMember {
     }
 
     private void viewAllTasks() throws SQLException {
-        String query = "SELECT * FROM tasks";
+        String query = "SELECT * FROM Task";
         try (PreparedStatement stmt = getConnection().prepareStatement(query);
              ResultSet rs = stmt.executeQuery()) {
             System.out.println("\n--- All Tasks ---");
@@ -78,7 +78,7 @@ public class TeamLeader extends TeamMember {
         System.out.print("Enter username to assign task to: ");
         String assignedTo = scanner.nextLine();
 
-        String query = "UPDATE tasks SET assigned_to = ? WHERE id = ?";
+        String query = "UPDATE Task SET assigned_to = ? WHERE id = ?";
         try (PreparedStatement stmt = getConnection().prepareStatement(query)) {
             stmt.setString(1, assignedTo);
             stmt.setInt(2, taskId);

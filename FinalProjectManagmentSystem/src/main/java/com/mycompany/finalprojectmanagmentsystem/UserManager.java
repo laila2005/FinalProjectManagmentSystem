@@ -25,7 +25,7 @@ public class UserManager {
         System.out.print("Enter password: ");
         String password = scanner.nextLine();
 
-       String query = "SELECT * FROM User WHERE username = ? AND password = ?";
+       String query = "SELECT * FROM [User] WHERE Username = ? AND Password = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, username);
             stmt.setString(2, password);

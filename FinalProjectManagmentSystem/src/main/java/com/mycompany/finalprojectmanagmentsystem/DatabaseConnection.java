@@ -11,17 +11,17 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- *
+ /
  * @author dell
  */
 public class DatabaseConnection {
     public static void main(String[] args) {
         // JDBC URL and credentials
-        String url = "jdbc:sqlserver://LAILA-MOHAMED-P\\dell:1433;databaseName=ProjectManagementDB;encrypt=true;trustServerCertificate=true;";
-        String user = "laila_mf";    
+        String url = "jdbc:sqlserver://LAILA-MOHAMED-P\\\\dell:1433;databaseName=ProjectManagementDB;encrypt=true;trustServerCertificate=true";
+        String user = "medfy";    
         String password = "medfylolo"; 
         String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"; // SQL Server JDBC Driver
-
+        
         // Declare connection objects
         Connection conn = null;
         Statement stmt = null;
@@ -32,7 +32,7 @@ public class DatabaseConnection {
             Class.forName(driver);
 
             // Establish the connection
-            conn = DriverManager.getConnection(url, user, password);
+            conn = DriverManager.getConnection(url,user , password);
             System.out.println("Database connection established successfully!");
 
             // Create a statement

@@ -16,11 +16,12 @@ import java.util.Scanner;
 public class Main {
 
     // Updated database credentials
-    private static final String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=ProjectManagementDB;encrypt=true;trustServerCertificate=true;";
-    private static final String DB_USER = "laila_mf";
-    private static final String DB_PASSWORD = "medfylolo";
+public static final String DB_URL = "jdbc:sqlserver://LAILA-MOHAMED-P\\dell:1433;databaseName=ProjectManagementDB;encrypt=true;trustServerCertificate=true";
+public static final String DB_USER = "medfy";
+public static final String DB_PASSWORD = "medfylolo";
     
     public static void main(String[] args) {
+        System.out.println("hello main class");
         // Attempt to connect to the database
         try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
             System.out.println("Connected to the database successfully!");

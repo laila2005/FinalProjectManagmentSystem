@@ -64,12 +64,12 @@ public class TeamLeader extends TeamMember {
              ResultSet rs = stmt.executeQuery()) {
             System.out.println("\n--- All Tasks ---");
             while (rs.next()) {
-                System.out.println("ID: " + rs.getInt("id") + ", Name: " + rs.getString("task_name") +
-                        ", Deadline: " + rs.getString("deadline") + ", Status: " + rs.getString("status") +
-                        ", Assigned To: " + rs.getString("assigned_to"));
+                System.out.println("ID: " + rs.getInt("Task_ID") + ", Name: " + rs.getString("Task_Name") +
+                        ", Deadline: " + rs.getString("Deadline") + ", Status: " + rs.getString("Status"));
             }
         }
     }
+
 
     private void assignTask(Scanner scanner) throws SQLException {
         System.out.print("Enter task ID: ");

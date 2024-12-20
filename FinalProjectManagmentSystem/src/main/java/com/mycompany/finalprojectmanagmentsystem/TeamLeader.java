@@ -78,7 +78,7 @@ public class TeamLeader extends TeamMember {
         System.out.print("Enter username to assign task to: ");
         String assignedTo = scanner.nextLine();
 
-        String query = "UPDATE Task SET assigned_to = ? WHERE id = ?";
+        String query = "UPDATE Task SET assigned_to = ? WHERE Task_ID = ?";
         try (PreparedStatement stmt = getConnection().prepareStatement(query)) {
             stmt.setString(1, assignedTo);
             stmt.setInt(2, taskId);

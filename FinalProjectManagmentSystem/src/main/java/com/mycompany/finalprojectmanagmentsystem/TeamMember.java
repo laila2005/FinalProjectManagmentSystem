@@ -56,7 +56,7 @@ public class TeamMember {
             ResultSet rs = stmt.executeQuery();
             System.out.println("\n--- My Tasks ---");
             while (rs.next()) {
-                System.out.println("ID: " + rs.getInt("id") + ", Name: " + rs.getString("task_name") + ", Deadline: " + rs.getString("deadline") + ", Status: " + rs.getString("status"));
+                System.out.println("ID: " + rs.getInt("Task_ID") + ", Name: " + rs.getString("Task_Name") + ", Deadline: " + rs.getString("Deadline") + ", Status: " + rs.getString("Status"));
             }
         }
     }
@@ -68,7 +68,7 @@ public class TeamMember {
         System.out.print("Enter new status (To-Do, On-Going, Done): ");
         String newStatus = scanner.nextLine();
 
-        String query = "UPDATE Task SET status = ? WHERE id = ? AND assigned_to = ?";
+        String query = "UPDATE Task SET Status = ? WHERE Task_ID = ? AND assigned_to = ? ";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, newStatus);
             stmt.setInt(2, taskId);

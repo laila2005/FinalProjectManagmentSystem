@@ -42,7 +42,7 @@ The Project Management System is a comprehensive software designed to manage and
 ### Database Configuration
 1. Open **SQL Server Management Studio**.
 2. Create a new database named `ProjectManagementDB`.
-3. Use the provided `schema.sql` file to create tables and relationships.
+3. Use the provided `Schema.sql` file to create tables and relationships.
 4. Add a new SQL Server login and grant access to the database (refer to the instructions in this document).
 
 ### Application Configuration

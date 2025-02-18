@@ -92,6 +92,8 @@ The Project Management System is a comprehensive software designed to manage and
 - **Laila Mohamed Fikry**
   - Software Engineer at Egyptian Russian University
   - ALX and Holberton School Graduate
+- **Sara Ahmed Mohamed
+ - Software Engineer at Egyptian Russian
 
 ---
 

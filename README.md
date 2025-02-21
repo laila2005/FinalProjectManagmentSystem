@@ -93,9 +93,9 @@ The Project Management System is a comprehensive software designed to manage and
   - Software Engineering student at Egyptian Russian University
   - ALX and Holberton School Graduate (SE program)
 - **Sara Ahmed Mohamed**
- - Software Engineering student the Egyptian Russian university
+  - Software Engineering student the Egyptian Russian university
 - **Habiba Saad**
- - Artificial intelligent student the Egyptian Russian university
+  - Artificial intelligent student the Egyptian Russian university
 ---
 
 ## License

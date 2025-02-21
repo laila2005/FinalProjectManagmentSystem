@@ -1,4 +1,4 @@
-# Project: Project Management System
+# Project Management System
 
 ## Overview
 The Project Management System is a comprehensive software designed to manage and streamline project tasks, resources, and team collaboration. It integrates a SQL Server database with a Java-based NetBeans application, ensuring robust and efficient management of projects.
